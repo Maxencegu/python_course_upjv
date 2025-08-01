@@ -1,6 +1,6 @@
 import re
 
-def hidden_test(first_name, age, message):
+def hidden_test_exo1(first_name, age, message):
     errors = []
 
     if not isinstance(first_name, str):
