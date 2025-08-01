@@ -1,12 +1,4 @@
 # hidden_tests.py
-def run_test(exercise):
-    if exercise == "exo1":
-        return hidden_test_exo1(first_name, age, message)
-    elif exercise == "exo2":
-        return hidden_test_exo2(a, b, c, total, average)
-    else:
-        return f"❌ Unknown exercise: {exercise}"
-
 def hidden_test_exo1(first_name, age, message):
     import re
     errors = []
