@@ -51,3 +51,26 @@ def hidden_test_exo3(text, length):
         return "❌ **Tests failed:**\n" + "\n".join(f"- {e}" for e in errors)
     else:
         return "✅ **Great! All tests passed for exercise 3!**"
+
+
+def hidden_test_exo4(number_1, number_2, sum_result, diff_result, prod_result, quot_result, rem_result):
+    errors = []
+
+    if number_1 != 7 or number_2 != 3:
+        errors.append("Variables number_1 and number_2 must be 7 and 3 respectively.")
+
+    if sum_result != number_1 + number_2:
+        errors.append("Incorrect sum_result value.")
+    if diff_result != number_1 - number_2:
+        errors.append("Incorrect diff_result value.")
+    if prod_result != number_1 * number_2:
+        errors.append("Incorrect prod_result value.")
+    if quot_result != number_1 / number_2:
+        errors.append("Incorrect quot_result value (should be division).")
+    if rem_result != number_1 % number_2:
+        errors.append("Incorrect rem_result value (should be modulo).")
+
+    if errors:
+        return "❌ **Tests failed:**\n" + "\n".join(f"- {e}" for e in errors)
+    else:
+        return "✅ **Well done! All tests passed for exercise 4!**"
