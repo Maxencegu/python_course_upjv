@@ -1,6 +1,7 @@
 # hidden_tests.py
+import re
+
 def hidden_test_exo1(first_name, age, message):
-    import re
     errors = []
 
     if not isinstance(first_name, str) or first_name.strip() == "":
@@ -20,6 +21,7 @@ def hidden_test_exo1(first_name, age, message):
     else:
         return "✅ **Congratulations, all tests passed!**"
 
+
 def hidden_test_exo2(a, b, c, total, average):
     errors = []
     if (a, b, c) != (5, 10, 15):
@@ -33,3 +35,19 @@ def hidden_test_exo2(a, b, c, total, average):
         return "❌ **Tests failed:**\n" + "\n".join(f"- {e}" for e in errors)
     else:
         return "✅ **Well done! All tests passed for exercise 2!**"
+
+
+def hidden_test_exo3(text, length):
+    errors = []
+    expected_text = "Python for Data Science"
+    expected_length = len(expected_text)
+
+    if text != expected_text:
+        errors.append(f"text must be exactly: '{expected_text}'.")
+    if length != expected_length:
+        errors.append(f"length must be {expected_length} (the length of the text).")
+
+    if errors:
+        return "❌ **Tests failed:**\n" + "\n".join(f"- {e}" for e in errors)
+    else:
+        return "✅ **Great! All tests passed for exercise 3!**"
