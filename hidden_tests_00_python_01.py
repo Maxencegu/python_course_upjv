@@ -37,13 +37,13 @@ def hidden_test_exo2(a, b, c, total, average):
         return "✅ **Well done! All tests passed for exercise 2!**"
 
 
-def hidden_test_exo3(text, length):
+def hidden_test_exo3(message, length):
     errors = []
-    expected_text = "Python for Data Science"
-    expected_length = len(expected_text)
+    expected_message = "Python for Data Science"
+    expected_length = len(expected_message)
 
-    if text != expected_text:
-        errors.append(f"text must be exactly: '{expected_text}'.")
+    if message != expected_message:
+        errors.append(f"text must be exactly: '{expected_message}'.")
     if length != expected_length:
         errors.append(f"length must be {expected_length} (the length of the text).")
 
