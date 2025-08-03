@@ -156,4 +156,78 @@ def hidden_test_exo8(values, squared, average):
         return "✅ **Excellent! All tests passed for exercise 8!**"
 
 
+def hidden_test_exo9(person):
+    errors = []
+    if not isinstance(person, dict):
+        errors.append("person must be a dictionary.")
+    else:
+        if person.get("name") != "Alice":
+            errors.append("person['name'] must be 'Alice'.")
+        if person.get("age") != 20:
+            errors.append("person['age'] must be 20.")
+        if person.get("city") != "Paris":
+            errors.append("person['city'] must be 'Paris'.")
+    if errors:
+        return "❌ **Tests failed:**\n- " + "\n- ".join(errors)
+    return "✅ **Exercise 9 passed successfully!**"
 
+
+def hidden_test_exo10(grades, average):
+    errors = []
+    if not isinstance(grades, dict):
+        errors.append("grades must be a dictionary.")
+    else:
+        expected = {"math":85, "science":90, "history":78, "english":88}
+        for k, v in expected.items():
+            if grades.get(k) != v:
+                errors.append(f"grades['{k}'] must be {v}.")
+    expected_avg = sum(expected.values()) / len(expected)
+    if average != expected_avg:
+        errors.append(f"average must be {expected_avg}.")
+    if errors:
+        return "❌ **Tests failed:**\n- " + "\n- ".join(errors)
+    return "✅ **Exercise 10 passed successfully!**"
+
+
+def hidden_test_exo11(inventory, removed_quantity):
+    errors = []
+    if not isinstance(inventory, dict):
+        errors.append("inventory must be a dictionary.")
+    else:
+        expected_inventory = {"apples": 15, "bananas": 8}
+        for k, v in expected_inventory.items():
+            if inventory.get(k) != v:
+                errors.append(f"inventory['{k}'] must be {v}.")
+    if removed_quantity != 3:
+        errors.append("removed_quantity must be 3.")
+    if errors:
+        return "❌ **Tests failed:**\n- " + "\n- ".join(errors)
+    return "✅ **Exercise 11 passed successfully!**"
+
+
+def hidden_test_exo12(students, avg_math_grade):
+    errors = []
+    if not isinstance(students, dict):
+        errors.append("students must be a dictionary.")
+    else:
+        expected_keys = {"John", "Emma", "Lucas", "Sophia"}
+        if set(students.keys()) != expected_keys:
+            errors.append(f"students keys must be {expected_keys}.")
+        for student in expected_keys:
+            if not isinstance(students[student], dict):
+                errors.append(f"students['{student}'] must be a dictionary.")
+        expected_grades = {
+            "John": {"math":85, "science":92},
+            "Emma": {"math":78, "science":88},
+            "Lucas": {"math":90, "science":95},
+            "Sophia": {"math":82, "science":91}
+        }
+        for student, grades in expected_grades.items():
+            if students.get(student) != grades:
+                errors.append(f"grades for '{student}' are incorrect.")
+    expected_avg = (85 + 78 + 90 + 82) / 4
+    if avg_math_grade != expected_avg:
+        errors.append(f"avg_math_grade must be {expected_avg}.")
+    if errors:
+        return "❌ **Tests failed:**\n- " + "\n- ".join(errors)
+    return "✅ **Exercise 12 passed successfully!**"
