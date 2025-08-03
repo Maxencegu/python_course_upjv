@@ -120,10 +120,10 @@ def hidden_test_exo7(numbers, sum_of_numbers):
     expected_list = [1, 2, 3, 4, 6, 7, 8, 9, 10, 15]
 
     if numbers != expected_list:
-        errors.append(f"List 'numbers' is incorrect. Expected {expected_list}, got {numbers}")
+        errors.append(f"List 'numbers' is incorrect. Expected {expected_list}")
 
     if sum_of_numbers != sum(expected_list):
-        errors.append(f"Sum 'sum_of_numbers' is incorrect. Expected {sum(expected_list)}, got {sum_of_numbers}")
+        errors.append(f"Sum 'sum_of_numbers' is incorrect. Expected {sum(expected_list)}")
 
     if errors:
         return "❌ **Tests failed:**\n" + "\n".join(f"- {e}" for e in errors)
