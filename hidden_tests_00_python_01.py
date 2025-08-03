@@ -91,3 +91,26 @@ def hidden_test_exo5(colors):
     else:
         return "✅ **Great job! Exercise 5 passed successfully!**"
 
+
+def hidden_test_exo6(numbers, even_numbers):
+    errors = []
+
+    if not isinstance(numbers, list):
+        errors.append("`numbers` must be a list.")
+    else:
+        expected_numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+        if numbers != expected_numbers:
+            errors.append(f"`numbers` list is incorrect. Expected: {expected_numbers}")
+
+    if not isinstance(even_numbers, list):
+        errors.append("`even_numbers` must be a list.")
+    else:
+        expected_even = [2, 4, 6, 8, 10]
+        if even_numbers != expected_even:
+            errors.append(f"`even_numbers` list is incorrect. Expected: {expected_even}")
+
+    if errors:
+        return "❌ **Tests failed:**\n" + "\n".join(f"- {e}" for e in errors)
+    else:
+        return "✅ **Great job! Exercise 6 passed successfully!**"
+
