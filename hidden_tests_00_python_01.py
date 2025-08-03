@@ -1,4 +1,4 @@
-# hidden_tests.py
+# hidden_tests_00_python_01.py
 import re
 
 def hidden_test_exo1(first_name, age, message):
@@ -74,3 +74,20 @@ def hidden_test_exo4(number_1, number_2, sum_result, diff_result, prod_result, q
         return "❌ **Tests failed:**\n" + "\n".join(f"- {e}" for e in errors)
     else:
         return "✅ **Well done! All tests passed for exercise 4!**"
+
+
+def hidden_test_exo5(colors):
+    errors = []
+
+    if not isinstance(colors, list):
+        errors.append("`colors` must be a list.")
+    else:
+        expected = ["red", "purple", "green", "yellow"]
+        if colors != expected:
+            errors.append(f"`colors` list is incorrect. Expected: {expected}")
+
+    if errors:
+        return "❌ **Tests failed:**\n" + "\n".join(f"- {e}" for e in errors)
+    else:
+        return "✅ **Great job! Exercise 5 passed successfully!**"
+
