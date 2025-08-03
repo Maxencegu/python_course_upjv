@@ -82,7 +82,7 @@ def hidden_test_exo5(colors):
     if not isinstance(colors, list):
         errors.append("`colors` must be a list.")
     else:
-        expected = ["red", "purple", "green", "yellow"]
+        expected = ["red", "black", "green", "grey"]
         if colors != expected:
             errors.append(f"`colors` list is incorrect. Expected: {expected}")
 
