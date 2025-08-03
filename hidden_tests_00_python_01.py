@@ -114,3 +114,20 @@ def hidden_test_exo6(numbers, even_numbers):
     else:
         return "✅ **Great job! Exercise 6 passed successfully!**"
 
+
+def hidden_test_exo7(numbers, sum_of_numbers):
+    errors = []
+    expected_list = [1, 2, 3, 4, 6, 7, 8, 9, 10, 15]
+
+    if numbers != expected_list:
+        errors.append(f"List 'numbers' is incorrect. Expected {expected_list}, got {numbers}")
+
+    if sum_of_numbers != sum(expected_list):
+        errors.append(f"Sum 'sum_of_numbers' is incorrect. Expected {sum(expected_list)}, got {sum_of_numbers}")
+
+    if errors:
+        return "❌ **Tests failed:**\n" + "\n".join(f"- {e}" for e in errors)
+    else:
+        return "✅ **Well done! All tests passed for exercise 7!**"
+
+
