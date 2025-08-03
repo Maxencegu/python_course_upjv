@@ -131,3 +131,29 @@ def hidden_test_exo7(numbers, sum_of_numbers):
         return "✅ **Well done! All tests passed for exercise 7!**"
 
 
+def hidden_test_exo8(values, squared, average):
+    errors = []
+
+    expected_values = [4, 8, 15, 16, 23, 42]
+    expected_squared = [16, 64, 100]  # Squares under or equal 200 + appended 100
+    expected_average = sum(expected_squared) / len(expected_squared)
+
+    # Check values list unchanged
+    if values != expected_values:
+        errors.append(f"'values' list must be {expected_values}")
+
+    # Check squared list content
+    if sorted(squared) != sorted(expected_squared):
+        errors.append(f"'squared' list is incorrect. Expected elements {expected_squared}")
+
+    # Check average
+    if not (abs(average - expected_average) < 1e-6):
+        errors.append(f"'average' value is incorrect. Expected {expected_average}")
+
+    if errors:
+        return "❌ **Tests failed:**\n" + "\n".join(f"- {e}" for e in errors)
+    else:
+        return "✅ **Excellent! All tests passed for exercise 8!**"
+
+
+
