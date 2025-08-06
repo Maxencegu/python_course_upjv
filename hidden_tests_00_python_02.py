@@ -1,22 +1,9 @@
 # hidden_tests_00_python_02.py
-import re
 
-def hidden_test_exo1(first_name, age, message):
+def hidden_test_exo1(x, y, sum_result):
     errors = []
-
-    if not isinstance(first_name, str) or first_name.strip() == "":
-        errors.append("first_name must be a non-empty string.")
-    elif re.search(r'\d', first_name):
-        errors.append("first_name must not contain digits.")
-
-    if not isinstance(age, int) or not (16 <= age <= 25):
-        errors.append("age must be an integer between 16 and 25.")
-
-    expected_message = f"Hello, my name is {first_name} and I am {age} years old."
-    if not isinstance(message, str) or message != expected_message:
-        errors.append(f"message is incorrect. Expected: '{expected_message}'")
-
-    if errors:
-        return "❌ **Tests failed:**\n" + "\n".join(f"- {e}" for e in errors)
-    else:
-        return "✅ **Congratulations, all tests passed!**"
+    if x != 8 or y != 2:
+        errors.append("x should be 8 and y should be 2.")
+    if sum_result != x + y:
+        errors.append("sum_result is incorrect.")
+    return "✅ All tests passed for exercise 1!" if not errors else "❌ " + "\n".join(errors)
