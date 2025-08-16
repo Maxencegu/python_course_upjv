@@ -20,27 +20,12 @@ def hidden_test_exo2(n, multiples):
 
 
 
-def hidden_test_exo3(age_1, age_2, age_3, category_1, category_2, category_3):
+def hidden_test_exo3(the_values):
     errors = []
-
-    if age_1 != 15:
-        errors.append("age_1 should be 15 (minor)")
-    if age_2 != 30:
-        errors.append("age_2 should be 30 (adult)")
-    if age_3 != 70:
-        errors.append("age_3 should be 70 (senior)")
-
-    if category_1 != "Minor":
-        errors.append("Expected 'Minor' for age_1 = 15")
-    if category_2 != "Adult":
-        errors.append("Expected 'Adult' for age_2 = 30")
-    if category_3 != "Senior":
-        errors.append("Expected 'Senior' for age_3 = 70")
-
-    if errors:
-        return "❌ **Tests failed:**\n" + "\n".join(f"- {e}" for e in errors)
-    else:
-        return "✅ **Great! All conditions are correctly tested and passed.**"
+    expected = [2, 4, 6, 8, 10, 12, 14, 16, 18, 20]
+    if the_values != expected:
+        errors.append("`values` must contain the sequence [2, 4, ..., 20].")
+    return "✅ Exercise 3 passed!" if not errors else "❌ Errors:\n- " + "\n- ".join(errors)
 
 
 
