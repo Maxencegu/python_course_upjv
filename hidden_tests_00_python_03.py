@@ -1,12 +1,12 @@
 # hidden_tests_00_python_03.py
 
-def hidden_test_exo1(x, y, sum_result):
+def hidden_test_exo1(numbers, total):
     errors = []
-    if x != 4 or y != 6:
-        errors.append("x should be 4 and y should be 6.")
-    if sum_result != x + y:
-        errors.append("sum_result is incorrect.")
-    return "✅ All tests passed for exercise 1!" if not errors else "❌ " + "\n".join(errors)
+    if numbers != [1, 2, 3, 4, 5]:
+        errors.append("`numbers` must be [1, 2, 3, 4, 5].")
+    if total != sum(numbers):
+        errors.append("`total` must be the sum of all elements in numbers.")
+    return "✅ Exercise 1 passed!" if not errors else "❌ Errors:\n- " + "\n- ".join(errors)
 
 
 def hidden_test_exo2(a, b, c, total, average):
