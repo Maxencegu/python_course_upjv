@@ -22,12 +22,12 @@ def hidden_test_exo2(num_1, num_2, num_3, total):
 
 def hidden_test_exo3(result1, result2, numbers):
     errors = []
-    if numbers != [4, 7]:
+    if numbers != [6, 9]:
         errors.append("You must test the function with numbers 4 and 7.")
     if result1 is not True:
-        errors.append("`result1` must be True for 4.")
+        errors.append("`result1` must be True for 6.")
     if result2 is not False:
-        errors.append("`result2` must be False for 7.")
+        errors.append("`result2` must be False for 9.")
     return "✅ Exercise 3 passed!" if not errors else "❌ Errors:\n- " + "\n- ".join(errors)
 
 
