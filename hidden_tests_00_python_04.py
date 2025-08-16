@@ -32,11 +32,11 @@ def hidden_test_exo3(result1, result2, numbers):
 
 
 
-def hidden_test_exo4(limit, num_primes):
+def hidden_test_exo4(n, squares):
     errors = []
-    if limit != 20:
-        errors.append("`limit` must be equal to 20.")
-    expected = [2, 3, 5, 7, 11, 13, 17, 19]
-    if num_primes != expected:
-        errors.append("`primes` must contain the prime numbers up to 20.")
+    if n != 8:
+        errors.append("`n` must be 8.")
+    expected = [1, 4, 9, 16, 25, 36, 49, 64]
+    if squares != expected:
+        errors.append(f"`squares` must be {expected}.")
     return "✅ Exercise 4 passed!" if not errors else "❌ Errors:\n- " + "\n- ".join(errors)
