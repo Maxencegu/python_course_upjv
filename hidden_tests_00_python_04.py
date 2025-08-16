@@ -32,11 +32,11 @@ def hidden_test_exo3(result1, result2, numbers):
 
 
 
-def hidden_test_exo4(n, squares):
+def hidden_test_exo4(n, cubes):
     errors = []
     if n != 8:
         errors.append("`n` must be 8.")
-    expected = [1, 4, 9, 16, 25, 36, 49, 64]
-    if squares != expected:
-        errors.append(f"`squares` must be {expected}.")
+    expected = [1, 8, 27, 64, 125, 216, 343, 512]
+    if cubes != expected:
+        errors.append(f"`cubes` must be {expected}.")
     return "✅ Exercise 4 passed!" if not errors else "❌ Errors:\n- " + "\n- ".join(errors)
