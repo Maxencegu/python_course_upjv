@@ -10,13 +10,12 @@ def hidden_test_exo1(name, message):
     return "✅ Exercise 1 passed!" if not errors else "❌ Errors:\n- " + "\n- ".join(errors)
 
 
-def hidden_test_exo2(n, multiples):
+def hidden_test_exo2(a, b, c, total):
     errors = []
-    if n != 7:
-        errors.append("`n` must be equal to 7.")
-    expected = [n * i for i in range(1, 16)]
-    if multiples != expected:
-        errors.append("`multiples` must contain the multiplication table of 7 from 1 to 15.")
+    if (a, b, c) != (5, 10, 15):
+        errors.append("`a, b, c` must be 5, 10, 15 respectively.")
+    if total != a + b + c:
+        errors.append("`total` must be equal to the sum of a, b, c.")
     return "✅ Exercise 2 passed!" if not errors else "❌ Errors:\n- " + "\n- ".join(errors)
 
 
