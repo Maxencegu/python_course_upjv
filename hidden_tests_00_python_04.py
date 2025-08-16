@@ -1,11 +1,12 @@
 # hidden_tests_00_python_04.py
 
-def hidden_test_exo1(my_numbers, the_sum):
+def hidden_test_exo1(name, message):
     errors = []
-    if my_numbers != [1, 3, 4, 5, 6]:
-        errors.append("`numbers` must be [1, 3, 4, 5, 6].")
-    if the_sum != sum(my_numbers):
-        errors.append("`total` must be the sum of all elements in numbers.")
+    if name != "Alice":
+        errors.append("`name` must be 'Alice'.")
+    expected = "Hello, Alice!"
+    if message != expected:
+        errors.append(f"`message` must be '{expected}'.")
     return "✅ Exercise 1 passed!" if not errors else "❌ Errors:\n- " + "\n- ".join(errors)
 
 
