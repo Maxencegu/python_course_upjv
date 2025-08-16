@@ -10,12 +10,12 @@ def hidden_test_exo1(name, message):
     return "✅ Exercise 1 passed!" if not errors else "❌ Errors:\n- " + "\n- ".join(errors)
 
 
-def hidden_test_exo2(a, b, c, total):
+def hidden_test_exo2(num_1, num_2, num_3, total):
     errors = []
-    if (a, b, c) != (5, 10, 15):
-        errors.append("`a, b, c` must be 5, 10, 15 respectively.")
-    if total != a + b + c:
-        errors.append("`total` must be equal to the sum of a, b, c.")
+    if (num_1, num_2, num_3) != (5, 10, 15):
+        errors.append("`num_1, num_2, num_3` must be 5, 10, 15 respectively.")
+    if total != num_1 + num_2 + num_3:
+        errors.append("`total` must be equal to the sum of num_1, num_2, num_3.")
     return "✅ Exercise 2 passed!" if not errors else "❌ Errors:\n- " + "\n- ".join(errors)
 
 
