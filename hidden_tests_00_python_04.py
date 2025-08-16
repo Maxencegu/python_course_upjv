@@ -20,11 +20,14 @@ def hidden_test_exo2(num_1, num_2, num_3, total):
 
 
 
-def hidden_test_exo3(the_values):
+def hidden_test_exo3(result1, result2, numbers):
     errors = []
-    expected = [2, 4, 6, 8, 10, 12, 14, 16, 18, 20]
-    if the_values != expected:
-        errors.append("`values` must contain the sequence [2, 4, ..., 20].")
+    if numbers != [4, 7]:
+        errors.append("You must test the function with numbers 4 and 7.")
+    if result1 is not True:
+        errors.append("`result1` must be True for 4.")
+    if result2 is not False:
+        errors.append("`result2` must be False for 7.")
     return "✅ Exercise 3 passed!" if not errors else "❌ Errors:\n- " + "\n- ".join(errors)
 
 
