@@ -29,24 +29,11 @@ def hidden_test_exo3(the_values):
 
 
 
-def hidden_test_exo4(number_1, number_2, number_3, result_1, result_2, result_3):
+def hidden_test_exo4(limit, num_primes):
     errors = []
-
-    if number_1 != 9:
-        errors.append("number_1 should be 9 (divisible by 3 and odd)")
-    if number_2 != 6:
-        errors.append("number_2 should be 6 (divisible by 3 but even)")
-    if number_3 != 10:
-        errors.append("number_3 should be 10 (not divisible by 3)")
-
-    if result_1 != "Divisible by 3 and odd":
-        errors.append("Expected 'Divisible by 3 and odd' for number_1 = 9")
-    if result_2 != "Does not meet the condition":
-        errors.append("Expected 'Does not meet the condition' for number_2 = 6")
-    if result_3 != "Does not meet the condition":
-        errors.append("Expected 'Does not meet the condition' for number_3 = 10")
-
-    if errors:
-        return "❌ **Tests failed:**\n" + "\n".join(f"- {e}" for e in errors)
-    else:
-        return "✅ **Perfect! You've correctly covered all logical conditions.**"
+    if limit != 20:
+        errors.append("`limit` must be equal to 20.")
+    expected = [2, 3, 5, 7, 11, 13, 17, 19]
+    if num_primes != expected:
+        errors.append("`primes` must contain the prime numbers up to 20.")
+    return "✅ Exercise 4 passed!" if not errors else "❌ Errors:\n- " + "\n- ".join(errors)
