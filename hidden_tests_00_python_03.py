@@ -2,8 +2,8 @@
 
 def hidden_test_exo1(numbers, total):
     errors = []
-    if numbers != [1, 2, 3, 4, 5]:
-        errors.append("`numbers` must be [1, 2, 3, 4, 5].")
+    if numbers != [1, 3, 4, 5, 6]:
+        errors.append("`numbers` must be [1, 3, 4, 5, 6].")
     if total != sum(numbers):
         errors.append("`total` must be the sum of all elements in numbers.")
     return "✅ Exercise 1 passed!" if not errors else "❌ Errors:\n- " + "\n- ".join(errors)
