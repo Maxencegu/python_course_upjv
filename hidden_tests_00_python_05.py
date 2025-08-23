@@ -11,7 +11,7 @@ def hidden_test_exo1(p1, Person):
     return "✅ Exercise 1 passed!" if not errors else "❌ Errors:\n- " + "\n- ".join(errors)
 
 
-def hidden_test_exo2(p1, message):
+def hidden_test_exo2(p1, Person, message):
     errors = []
     if not isinstance(p1, Person):
         errors.append("p1 must be a Person instance.")
