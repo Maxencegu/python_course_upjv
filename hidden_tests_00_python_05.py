@@ -1,4 +1,5 @@
 # hidden_tests_00_python_05.py
+import math
 
 def hidden_test_exo1(p1, Person):
     errors = []
@@ -32,3 +33,16 @@ def hidden_test_exo3(p1, p2, ages, result):
         errors.append("the average must be 28.")
     return "✅ Exercise 3 passed!" if not errors else "❌ Errors:\n- " + "\n- ".join(errors)
 
+
+def hidden_test_exo4(circle_radius, circle_area):
+    errors = []
+
+    # Test radius range
+    if not (1 <= circle_radius <= 10):
+        errors.append("circle_radius must be between 1 and 10.")
+
+    # Test area calculation with rounding
+    expected_area = round(math.pi * circle_radius**2, 3)
+    if circle_area != expected_area:
+        errors.append(f"circle_area must be rounded π * radius^2 = {expected_area}.")
+    return "✅ Exercise 4 passed!" if not errors else "❌ Errors:\n- " + "\n- ".join(errors)
