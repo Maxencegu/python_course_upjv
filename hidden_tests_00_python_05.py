@@ -19,3 +19,16 @@ def hidden_test_exo2(p1, Person, message):
         errors.append("message must be 'Hello, my name is Alice'.")
     return "✅ Exercise 2 passed!" if not errors else "❌ Errors:\n- " + "\n- ".join(errors)
 
+
+def hidden_test_exo3(p1, p2, ages, result):
+    errors = []
+    if (p1.name, p1.age) != ("Alice", 26):
+        errors.append("p1 must be Alice, 26.")
+    if (p2.name, p2.age) != ("Bob", 30):
+        errors.append("p2 must be Bob, 30.")
+    if ages != [26, 30]:
+        errors.append("ages list must be [26, 30].")
+    if result != 28:
+        errors.append("the average must be 28.")
+    return "✅ Exercise 3 passed!" if not errors else "❌ Errors:\n- " + "\n- ".join(errors)
+
