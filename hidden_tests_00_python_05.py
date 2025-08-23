@@ -1,6 +1,6 @@
 # hidden_tests_00_python_05.py
 
-def hidden_test_exo1(p1):
+def hidden_test_exo1(p1, Person):
     errors = []
     if not isinstance(p1, Person):
         errors.append("p1 must be an instance of Person.")
